@@ -1,0 +1,48 @@
+nav {
+    flex-direction: column;
+    >*{
+        min-width: -webkit-fill-available;
+    }
+    >:last-child{
+        padding: 10px 16px;
+    }
+}
+
+li.days {
+    width: 14.28vw;
+    text-align: center;
+}
+
+.dropdown-menu {
+    overflow-y: scroll;
+    max-height: 200px;
+}
+
+.current-section {
+    background-color: green !important
+  }
+  .current-section::after {
+    background-color: yellow !important; 
+    color: red !important;
+  
+  }
+
+table {
+    display: table;
+    min-height: 100vh;
+    #calendar {
+        position: absolute;
+        top: 96px;
+        width: 100vw;
+        tr {
+            display: flex;
+            td{
+                width: 14.28vw;
+            }
+        }
+    }
+}
+
+td {
+    text-align: center;
+}

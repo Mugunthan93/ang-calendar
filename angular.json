@@ -20,6 +20,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "lodash"
+            ],
             "outputPath": "dist/ang-calendar",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -31,9 +34,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -127,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "ang-calendar"
+  "defaultProject": "ang-calendar",
+  "cli": {
+    "analytics": "9c056ef2-0b4e-4126-8321-737a2eb42c57"
+  }
 }
